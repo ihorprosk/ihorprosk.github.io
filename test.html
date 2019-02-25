@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+function check() {
+var i=0;
+if(document.test.vopr1.value=="Вторая мировая война") i++;
+if(document.test.vopr2[0].checked) i++;
+if(!document.test.vopr3[0].checked && document.test. vopr3[1].checked && document.test.vopr3[2].checked) i++;
+if(document.test.vopr4.value=="3") i++;
+if(document.test.vopr5[1].checked) i++;
+if(!document.test.vopr6[0].checked && document.test. vopr6[1].checked && document.test.vopr6[2].checked) i++;
+document.getElementById("qwerty").innerHTML="VASHA OCINKA-" +i;
+}
+</script>
+</head>
+<body>
+	<form name="test">
+Крупнейший вооруженный конфликт в в истории человечества?<br>
+<input type="text" name="vopr1"><br>
+
+
+Начало?<br>
+<input type="radio" name="vopr2">1 сентября 1939 <br>
+<input type="radio" name="vopr2">1 октября 1939 <br>
+<input type="radio" name="vopr2">7 сентября 1929 <br>
+
+
+Конец?<br>
+<input type="radio" name="vopr5">6 сентября 1945<br>
+<input type="radio" name="vopr5">2 сентября 1945<br>
+<input type="radio" name="vopr5">9 мая 1945<br>
+
+
+Причина?<br>
+<select name="vopr4"> <option value="1">нет
+	<option value="2">нет
+	<option value="3">Тяжёлые для Германии условия Версальского мирного договора 1919 года
+</select><br>
+
+
+Место?<br>
+<input type="checkbox" name="vopr3">Северная Америка<br>
+<input type="checkbox" name="vopr3">Евразия<br>
+<input type="checkbox" name="vopr3">Африка<br>
+
+
+Командующие?<br>
+<input type="checkbox" name="vopr6">NO<br>
+<input type="checkbox" name="vopr6">Адольф Гитлер<br>
+<input type="checkbox" name="vopr6">Иосиф Сталин<br>
+<input type="button" value="Перевірити" onclick="check()">
+	</form>
+	<span id="qwerty"></span>
+</body>
+</html>
