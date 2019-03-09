@@ -1,0 +1,80 @@
+﻿﻿<!DOCTYPE HTML>
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>E</title>
+
+<link href="css/classes.css" rel="stylesheet" type="text/css" media="all" />
+
+
+
+
+  <style>
+/*Фон*/
+ body {
+      background-image: url(images/fon4.png);
+    }
+    .prv_b:hover, .nxt_b:hover{opacity:.6;}
+.prv_b{
+left:10px;
+background:url(images/prv.png) no-repeat;
+}
+.nxt_b{
+right:10px;
+background:url(images/nxt.png) no-repeat;
+margin-right: -2%;
+}
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script>
+$(function() {
+var sldr = $('.sldr'),
+sldrContent = sldr.html(),
+slideWidth = $('.sl_ctr').outerWidth(),
+slideCount = $('.sldr img').length,
+prv_b = $('.prv_b'),
+nxt_b = $('.nxt_b'),
+sldrInterval = 3300,
+animateTime = 1000,
+course = 1,
+margin = - slideWidth;
+$('.sldr img:last').clone().prependTo('.sldr');$('.sldr img').eq(1).clone().appendTo('.sldr');$('.sldr').css('margin-left',-slideWidth);function nxt_bSlide(){interval=window.setInterval(animate,sldrInterval)}function animate(){if(margin==-slideCount*slideWidth-slideWidth){sldr.css({'marginLeft':-slideWidth});margin=-slideWidth*2}else if(margin==0&&course==-1){sldr.css({'marginLeft':-slideWidth*slideCount});margin=-slideWidth*slideCount+slideWidth}else{margin=margin-slideWidth*(course)}sldr.animate({'marginLeft':margin},animateTime)}function sldrStop(){window.clearInterval(interval)}prv_b.click(function(){if(sldr.is(':animated')){return false}var course2=course;course=-1;animate();course=course2});nxt_b.click(function(){if(sldr.is(':animated')){return false}var course2=course;course=1;animate();course=course2});sldr.add(nxt_b).add(prv_b).hover(function(){sldrStop()},nxt_bSlide);nxt_bSlide()});
+</script>
+
+
+
+ </head>
+ <body>
+
+   <div class="menu_main">
+		           <ul  class="menu">
+				   <img src="images/logo1.png" class="logo" width="90" height="90">
+        </ul>
+        <hr class="hr">			
+</div>
+
+<div class="cleft">
+<div class="sl_ctr">
+<div class="sldr">  
+<img src="class/e_class.jpg" alt="">
+<img src="class/e_class1.jpg" alt="">
+<img src="class/e_class2.jpg" alt="">
+</div>
+<div class="prv_b"></div>
+<div class="nxt_b"></div>
+</div>
+<div class="text">
+	<p><b>Mercedes-Benz E-класс</b> — серия легковых автомобилей бизнес-класса немецкой торговой марки Mercedes-Benz, официально представленная с 1993 года и в настоящее время состоящая из пяти поколений.
+
+<p>До 1993 года компания Mercedes-Benz выпускала серию автомобилей бизнес-класса без унифицированной структуры именования. Суффикс «E» происходил от слова Einspritzung, что в переводе с немецкого означало систему впрыска топлива — новаторское технологическое решение, которым первыми оснастили предшественников современного E-класса в 1960-х годах (например, 230 E). Рыночное именование автомобилей сохранялось вплоть до выхода Mercedes-Benz W124 в 1993 году, где символ «E» использовался в качестве префикса (например, E 220), а серия автомобилей стала официально именоваться E-классом. Необходимость использовать отличительный признак топливной системы отпала, так как все транспортные средства компании к этому моменту использовали впрыск топлива.
+
+<p>Автомобили E-класса выпускаются с бензиновыми, дизельными, гибридными и газовыми (NGT) двигателями различных конфигураций (от I4 до V8), с приводом на задние колёса или постоянным полным приводом 4MATIC, а также в многочисленных модификациях кузовов: седан, универсал, купе и кабриолет (с 2009 года). Кроме того, компания также выпускает высокопроизводительные версии, доработанные инженерами подразделения Mercedes-AMG (E63 AMG и E43 AMG, ранее — E36 AMG, E50 AMG, E55 AMG и E60 AMG).
+
+<p>Автомобили E-класса являются самыми продаваемыми в иерархии классов Mercedes-Benz за всю историю компании. К 2015 году было продано более 13 миллионов единиц серии.
+</div>
+</div>
+ </body>
+ 
+</html>

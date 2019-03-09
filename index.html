@@ -1,14 +1,168 @@
-<!DOCTYPE HTML>
+﻿﻿<!DOCTYPE HTML>
 <html>
  <head>
-  <meta charset="utf-8">
-  <title>Index</title>
+  <meta charset=utf-8">
+  <title>Mercedes Benz</title>
+  <style>
+/*Фон*/
+    body {
+    background-size: cover;
+    }
+
+.bgvideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -9999;
+}
+/* Меню*/
+.menu_main{
+	 position: relative;
+	 margin-left: 5%;
+	 margin-right: 5%;
+	 margin-top: -30px;
+
+	 padding-right: 3%;
+	 padding-left: 3%;
+
+	 z-index: 5;
+   }
+
+   .logo { margin-top:1px;
+	 margin-left: 1px;
+	 margin-right: 40%;}
+
+    
+
+   
+ul.menu li{
+	 display:Inline;  
+    }  
+   
+a{ 
+     text-decoration: none; 
+	 color:white;	
+	 font-family: ReSquare;
+	 font-size:23pt;
+	 padding-right:20px;
+	 padding-left:20px;
+	 margin-left: 5px;
+	 margin-right: 5px;
+	 padding-bottom: 3px;
+    }
+   
+a:hover {
+    background-color:#708090;
+	color:black;
+    }
+a:active {
+	background-color:#B0C4DE;
+	color:black;
+	}
+	
+.hr{
+	margin-right: -30px;
+	margin-left: -10px;
+}
+
+ @media screen and (max-width: 1300px) 
+     {
+    .logo { margin-top:1px;
+   margin-left: 1px;
+   margin-right: 10%; }}
+
+    @media screen and (max-width: 925px) 
+     {
+    .logo { margin-top:1px;
+   margin-left: 1px;
+   margin-right: 5%; }}
+   .menu_main  {
+    flex-direction: column;
+  }
+  .menu_main .menu ul {
+    flex-direction: column;
+    align-self: center;
+  }
+  .menu_main .menu ul li {
+    margin: 5px;
+  }
+}
+
+.content{
+    color: #343434;
+    font-weight: normal;
+    font-family: 'Ultra', sans-serif;  
+    font-size: 30px;
+    line-height: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 0 2px white, 0 3px #777;
+   }
+   h1 {
+    margin-top: 8%;
+     text-align: center;
+    color: #343434;
+    font-weight: normal;
+    font-family: 'Ultra', sans-serif;  
+    font-size: 36px;
+    line-height: 42px;
+    text-transform: uppercase;
+    text-shadow: 0 2px white, 0 3px #777;
+}
+h2 {
+   text-align: center;
+    margin: 1em 0 0.5em 0;
+    color: #343434;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 40px;
+    font-family: 'Orienta', sans-serif;
+}
+h3 {
+    text-align: center;
+    margin: 1em 0 0.5em 0;
+    color: snow;
+    
+    line-height: 40px;
+    font-weight: normal;
+ 
+    font-family: 'Orienta', sans-serif;
+    letter-spacing: 1px;
+    font-style: italic;
+}
+
+</style>
+
+<link rel="shortcut icon" href="images/logo.ico" type="image/x-icon">
+
  </head>
  <body>
-<a href="adapt.html">link1</a>
-<a href="flex.html">link2</a>
-<a href="shah.html">link3</a>
-<a href="grid.html">link4</a>
-<a href="test.html">link5</a>
+
+   <div class="menu_main">
+		           <ul  class="menu">
+				   <img src="images/logo.png" class="logo" width="90" height="90">
+		<li> <a href="index.html"><b>Main</b></a></li>
+        <li><a href="classes.html"><b>Сlasses</b></a></li>
+        <li> <a href="history.html"><b>History</b></a></li>
+        </ul>
+        <hr class="hr">			
+	</div>
+
+  <div class="content">
+  <h1>[mɛʁˈtseːdəs ˈbɛnts]</h1>  
+  <h2 class="h2">best or nothing</h2>
+  <h3 class="h3">ihor proskurnia (MMXIX)</h3>
+  </div>
+
+  <video autoplay loop muted class="bgvideo" id="bgvideo">
+   <source src="video/fon.mp4" type="video/mp4"></source>
+  </video>
+
+
  </body>
+ 
 </html>

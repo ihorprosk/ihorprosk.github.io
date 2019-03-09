@@ -1,0 +1,72 @@
+﻿﻿<!DOCTYPE HTML>
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>A</title>
+
+<link href="css/classes.css" rel="stylesheet" type="text/css" media="all" />
+  <style>
+/*Фон*/
+ body {
+      background-image: url(images/fon4.png);
+    }
+    .prv_b:hover, .nxt_b:hover{opacity:.6;}
+.prv_b{
+left:10px;
+background:url(images/prv.png) no-repeat;
+}
+.nxt_b{
+right:10px;
+background:url(images/nxt.png) no-repeat;
+margin-right: -2%;
+
+}
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script>
+$(function() {
+var sldr = $('.sldr'),
+sldrContent = sldr.html(),
+slideWidth = $('.sl_ctr').outerWidth(),
+slideCount = $('.sldr img').length,
+prv_b = $('.prv_b'),
+nxt_b = $('.nxt_b'),
+sldrInterval = 3300,
+animateTime = 1000,
+course = 1,
+margin = - slideWidth;
+$('.sldr img:last').clone().prependTo('.sldr');$('.sldr img').eq(1).clone().appendTo('.sldr');$('.sldr').css('margin-left',-slideWidth);function nxt_bSlide(){interval=window.setInterval(animate,sldrInterval)}function animate(){if(margin==-slideCount*slideWidth-slideWidth){sldr.css({'marginLeft':-slideWidth});margin=-slideWidth*2}else if(margin==0&&course==-1){sldr.css({'marginLeft':-slideWidth*slideCount});margin=-slideWidth*slideCount+slideWidth}else{margin=margin-slideWidth*(course)}sldr.animate({'marginLeft':margin},animateTime)}function sldrStop(){window.clearInterval(interval)}prv_b.click(function(){if(sldr.is(':animated')){return false}var course2=course;course=-1;animate();course=course2});nxt_b.click(function(){if(sldr.is(':animated')){return false}var course2=course;course=1;animate();course=course2});sldr.add(nxt_b).add(prv_b).hover(function(){sldrStop()},nxt_bSlide);nxt_bSlide()});
+</script>
+
+
+
+ </head>
+ <body>
+
+   <div class="menu_main">
+		           <ul  class="menu">
+				   <img src="images/logo1.png" class="logo" width="90" height="90">
+        <hr class="hr">						
+</div>
+
+<div class="cleft">
+<div class="sl_ctr">
+<div class="sldr">  
+<img src="class/a_class.jpg" alt="">
+</div>
+<div class="prv_b"></div>
+<div class="nxt_b"></div>
+</div>
+<div class="text">
+		<p><b>Mercedes-Benz A-класс</b> — серия компактных (до 2012 года — субкомпактных) легковых автомобилей немецкой марки Mercedes-Benz. Первое поколение (W168) было представлено в 1997 году, модель второго поколения (W169) появилась в конце 2004 года, а третье поколение (W176) дебютировало в 2012 году. Является первой серией автомобилей компании в своём сегменте, где был установлен передний привод.
+
+<p>Разработка прототипа была начата ещё в начале 1990-х годов. При проектировании будущего автомобиля инженерами компании были учтены опыт и решения, полученные при работе над концепткаром Mercedes-Benz NAFA. На 1991 год были разработаны два прототипа: один оснащался двигателем внутреннего сгорания, второй электромотором. По экономическим соображениям на массовый рынок в 1997 году была выпущена только модель с ДВС, в то время как электрокар отправился на долгосрочное тестирование и доработку.
+
+<P>Первоначально серия представляла собой пятидверные автомобили в кузове хэтчбек, однако с приходом второго поколения появился трёхдверный вариант. На коммерческом рынке транспортных средств данный класс позиционировался как стартовая модель в линейке продукции компании Mercedes-Benz. С приходом третьего поколения в 2012 году автомобили A-класса выросли в длину на 68 см, что сделало их длиннее, чем модели первого поколения B-класса.
+</div>
+</div>
+ </body>
+ 
+</html>

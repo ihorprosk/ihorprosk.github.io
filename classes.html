@@ -1,0 +1,198 @@
+﻿﻿<!DOCTYPE HTML>
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Classes</title>
+
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+
+
+
+  <style>
+/*Фон*/
+       body {
+    background-size: cover;
+    }
+
+.bgvideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -9999;
+}
+/* Меню*/
+.menu_main{
+	 position: relative;
+	 margin-left: 5%;
+	 margin-right: 5%;
+	 margin-top: -30px;
+
+	 padding-right: 3%;
+	 padding-left: 3%;
+
+	 z-index: 5;
+   }
+
+   .logo { margin-top:1px;
+	 margin-left: 1px;
+	 margin-right: 40%;}
+
+    
+
+   
+ul.menu li{
+	 display:Inline;  	
+    }  
+   
+a{ 
+     text-decoration: none; 
+	 color:white;	
+	 font-family: ReSquare;
+	 font-size:23pt;
+	 padding-right:20px;
+	 padding-left:20px;
+	 margin-left: 5px;
+	 margin-right: 5px;
+	 padding-bottom: 3px;
+    }
+   
+a:hover {
+    background-color:#708090;
+	color:black;
+    }
+a:active {
+	background-color:#B0C4DE;
+	color:black;
+	}
+	
+.hr{
+	margin-right: -30px;
+	margin-left: -10px;
+}
+
+ @media screen and (max-width: 1300px) 
+     {
+    .logo { margin-top:1px;
+   margin-left: 1px;
+   margin-right: 10%; }}
+
+    @media screen and (max-width: 925px) 
+     {
+    .logo { margin-top:1px;
+   margin-left: 15%;
+   margin-right: 15%; 
+   margin-bottom: 3%;
+}
+   .menu_main  {
+    flex-direction: column;
+  }
+  .menu_main .menu ul {
+    flex-direction: column;
+    align-self: center;
+  }
+  .menu_main .menu ul li {
+    margin: 5px;
+  }
+}
+
+
+
+.podmenu{
+	margin-top: 5%;
+	margin-right: 7%;
+	margin-left: 8%;
+	margin-bottom: 5%;
+
+}
+.content{
+   margin-top:2%;
+    margin-left: 7%;
+    margin-right: 6%;
+
+   border: solid 5px; 
+   border-color: #708090;
+   background-color: rgba(0, 0, 0, 0.6);;
+   
+   font-size:14pt;
+   color: snow;
+   padding: 1%;
+   }
+
+</style>
+
+ </head>
+ <body>
+
+   <div class="menu_main">
+		           <ul  class="menu">
+				   <img src="images/logo1.png" class="logo" width="90" height="90">
+		<li> <a href="index.html"><b>Main</b></a></li>
+        <li><a href="classes.html"><b>Сlasses</b></a></li>
+        <li> <a href="history.html"><b>History</b></a></li>
+        </ul>
+        <hr class="hr">			
+</div>
+
+<div class="podmenu">
+  <div class="article-grids">
+	<div class="col-md-2 article-grid">
+		<a href="aclass.html" target="_blank"><img src="images/A1.jpg" alt=""/></a>
+		<div class="article-info">
+			<p>серия компактных легковых автомобилей</p>
+			<p>A-класс<a href="aclass.html" class="plus" target="_blank"></a></p>
+		</div>
+	</div>
+	<div class="col-md-2 article-grid">
+		<a href="bclass.html" target="_blank"><img src="images/B1.jpg" alt=""/></a>
+		<div class="article-info">
+			<p>серия компактных автомобилей (хетчбэк)</p>
+			<p>B-класс<a href="bclass.html" class="plus" target="_blank"></a></p>
+		</div>
+	</div>
+	<div class="col-md-2 article-grid">
+		<a href="cclass.html" target="_blank"><img src="images/C1.jpg" alt=""/></a>
+		<div class="article-info">
+			<p>серия компактных представительских автомобилей</p>
+			<p>C-класс<a href="cclass.html" class="plus" target="_blank"></a></p>
+		</div>
+	</div>
+	<div class="col-md-2 article-grid">
+		<a href="eclass.html" target="_blank"><img src="images/E1.jpg" alt=""/></a>
+		<div class="article-info">
+			<p>серия легковых автомобилей бизнес-класса</p>
+			<p>E-класс<a href="eclass.html" class="plus" target="_blank"></a></p>
+		</div>
+	</div>
+	<div class="col-md-2 article-grid">
+		<a href="gclass.html" target="_blank"><img src="images/G1.jpg" alt=""/></a>
+		<div class="article-info">
+			<p>серия полноразмерных внедорожников</p>
+			<p>G-класс<a href="gclass.html" class="plus" target="_blank"></a></p>
+		</div>
+	</div>
+	<div class="col-md-2 article-grid">
+		<a href="sclass.html" target="_blank"><img src="images/S1.jpg" alt=""/></a>
+		<div class="article-info">
+			<p>флагманская серия представительских автомобилей </p>
+			<p>S-класс<a href="sclass.html" class="plus" target="_blank"></a></p>
+		</div>
+	</div>
+</div>
+</div>
+<div class="content">
+	<p>Четкое разделение на классы, которое сохраняется и по сей день, началось с 1993 года. Мы сейчас не будем вдаваться в эволюцию маркировки с 20-х годов прошлого века, и просто зафиксируем, что в 80-х годах были цифровые индексы, обозначавшие объем двигателя (300 для трехлитровых моделей, 280 — для 2.8-литровых и так далее), а ориентироваться в модельном ряду проще всего было по кузовам. Например, индексами W123 и W124 обозначали автомобили, которые мы сегодня отнесли бы к Е-классу. Исключение составлял S-Class, который получил такое официальное наименование с 1972 года, когда дебютировал W116. Кстати, S – это sonder, «особый».
+</div>
+
+<video autoplay loop muted class="bgvideo" id="bgvideo">
+   <source src="video/fon_class1.mp4" type="video/mp4"></source>
+  </video>
+
+ </body>
+ 
+</html>

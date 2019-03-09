@@ -1,0 +1,89 @@
+﻿﻿<!DOCTYPE HTML>
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>G</title>
+<link href="css/classes.css" rel="stylesheet" type="text/css" media="all" />
+
+
+  <style>
+/*Фон*/
+ body {
+      background-image: url(images/fon4.png);
+    }
+    .prv_b:hover, .nxt_b:hover{opacity:.6;}
+.prv_b{
+left:10px;
+background:url(images/prv.png) no-repeat;
+}
+.nxt_b{
+right:10px;
+background:url(images/nxt.png) no-repeat;
+margin-right: -2%;
+}
+</style>
+
+  
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script>
+$(function() {
+var sldr = $('.sldr'),
+sldrContent = sldr.html(),
+slideWidth = $('.sl_ctr').outerWidth(),
+slideCount = $('.sldr img').length,
+prv_b = $('.prv_b'),
+nxt_b = $('.nxt_b'),
+sldrInterval = 3300,
+animateTime = 1000,
+course = 1,
+margin = - slideWidth;
+$('.sldr img:last').clone().prependTo('.sldr');$('.sldr img').eq(1).clone().appendTo('.sldr');$('.sldr').css('margin-left',-slideWidth);function nxt_bSlide(){interval=window.setInterval(animate,sldrInterval)}function animate(){if(margin==-slideCount*slideWidth-slideWidth){sldr.css({'marginLeft':-slideWidth});margin=-slideWidth*2}else if(margin==0&&course==-1){sldr.css({'marginLeft':-slideWidth*slideCount});margin=-slideWidth*slideCount+slideWidth}else{margin=margin-slideWidth*(course)}sldr.animate({'marginLeft':margin},animateTime)}function sldrStop(){window.clearInterval(interval)}prv_b.click(function(){if(sldr.is(':animated')){return false}var course2=course;course=-1;animate();course=course2});nxt_b.click(function(){if(sldr.is(':animated')){return false}var course2=course;course=1;animate();course=course2});sldr.add(nxt_b).add(prv_b).hover(function(){sldrStop()},nxt_bSlide);nxt_bSlide()});
+</script>
+
+
+
+ </head>
+ <body>
+
+   <div class="menu_main">
+		           <ul  class="menu">
+				   <img src="images/logo1.png" class="logo" width="90" height="90">
+        </ul>
+        <hr class="hr">			
+</div>
+
+<div class="cleft">
+<div class="sl_ctr">
+<div class="sldr">  
+<img src="class/g_class.jpg" alt="">
+<img src="class/g_class1.jpg" alt="">
+<img src="class/g_class2.jpg" alt="">
+<img src="class/g_class3.jpg" alt="">
+<img src="class/g_class4.jpg" alt="">
+</div>
+<div class="prv_b"></div>
+<div class="nxt_b"></div>
+</div>
+<div class="text">
+	<p><b>Mercedes-Benz G-класс</b>, иногда именуемый G-Wagen (G — сокр. от нем. Geländewagen — [ɡəˈlɛːndəvaːɡn], «внедорожник»), — серия полноразмерных внедорожников (автомобилей повышенной проходимости), производимых в Австрии фирмой Magna Steyr (ранее Steyr-Daimler-Puch) и продаваемых под торговой маркой Mercedes-Benz. Выпускается с 1979 года по настоящее время.
+
+<p>G-класс был разработан в качестве военного транспортного средства по предложению иранского шаха Мохаммеда Реза Пехлеви, в то время являвшегося акционером компании Mercedes-Benz. Гражданская версия автомобиля была представлена в 1979 году.
+
+<p>В отличие от иных серий транспортных средств торговой марки Mercedes-Benz, автомобили G-класса сохраняют свой уникальный внешний вид независимо от модификации, будь то заводская или высокопроизводительная от подразделения Mercedes-AMG, уже на протяжении нескольких десятилетий.
+	<p><b>Mercedes-Benz X156</b> — мини-кроссовер, выпускающийся немецкой компанией Mercedes-Benz с декабря 2013 года в Европе. Был представлен на Франкфуртском автосалоне 2013 года.
+
+<P>В ноябре 2013 года автомобиль был номинирован на звание «Лучший автомобиль года в мире». С декабря того же года автомобиль продаётся в России по цене от 1 млн 380 тыс. рублей.
+
+<p><b>Mercedes-Benz GLC-класс</b> (G — сокр. от нем. Geländewagen — ɡəˈlɛːndəvaːɡn, «внедорожник»; L — буква, выполняющая роль связывающего элемента с последующим символом; C — сокр. от нем. C-klasse — «C-класс») — серия люксовых компактных кроссоверов от немецкой компании Mercedes-Benz, пришедшая на смену GLK-классу в 2015 году.
+
+<p><b>Mercedes-Benz GL-класс</b> (от нем. Geländewagen Lang — «удлинённый внедорожник»; с 2015 года — GLS-класс) — серия полноразмерных кроссоверов люкс-класса от немецкой компании Mercedes-Benz. В иерархии классов компании стоит выше M/GLE-класса и является флагманом в линейке кроссоверов марки. Включает два поколения автомобилей: X164, выпускавшегося с 2006 по 2012 год, и X166, продажи которого начались в 2012 году.
+
+<p>Мировая премьера первой модели GL-класса состоялась в 2006 году на Североамериканском международном автосалоне. Изначально планировалось продавать автомобили только для американского рынка, но позже было принято решение расширить сектор продаж странами Европы. Первоначальное производство было налажено в Германии, но впоследствии было перенесено в США. В 2009 году первое поколение было подвергнуто рестайлингу, изменившему внешний вид автомобиля и его салона.
+
+</div>
+</div>
+ </body>
+ 
+</html>

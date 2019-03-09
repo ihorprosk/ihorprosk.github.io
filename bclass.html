@@ -1,0 +1,74 @@
+﻿﻿<!DOCTYPE HTML>
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>B</title>
+
+<link href="css/classes.css" rel="stylesheet" type="text/css" media="all" />
+
+  <style>
+/*Фон*/
+ body {
+      background-image: url(images/fon4.png);
+    }
+    .prv_b:hover, .nxt_b:hover{opacity:.6;}
+.prv_b{
+left:10px;
+background:url(images/prv.png) no-repeat;
+}
+.nxt_b{
+right:10px;
+background:url(images/nxt.png) no-repeat;
+margin-right: -2%;
+
+}
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script>
+$(function() {
+var sldr = $('.sldr'),
+sldrContent = sldr.html(),
+slideWidth = $('.sl_ctr').outerWidth(),
+slideCount = $('.sldr img').length,
+prv_b = $('.prv_b'),
+nxt_b = $('.nxt_b'),
+sldrInterval = 3300,
+animateTime = 1000,
+course = 1,
+margin = - slideWidth;
+$('.sldr img:last').clone().prependTo('.sldr');$('.sldr img').eq(1).clone().appendTo('.sldr');$('.sldr').css('margin-left',-slideWidth);function nxt_bSlide(){interval=window.setInterval(animate,sldrInterval)}function animate(){if(margin==-slideCount*slideWidth-slideWidth){sldr.css({'marginLeft':-slideWidth});margin=-slideWidth*2}else if(margin==0&&course==-1){sldr.css({'marginLeft':-slideWidth*slideCount});margin=-slideWidth*slideCount+slideWidth}else{margin=margin-slideWidth*(course)}sldr.animate({'marginLeft':margin},animateTime)}function sldrStop(){window.clearInterval(interval)}prv_b.click(function(){if(sldr.is(':animated')){return false}var course2=course;course=-1;animate();course=course2});nxt_b.click(function(){if(sldr.is(':animated')){return false}var course2=course;course=1;animate();course=course2});sldr.add(nxt_b).add(prv_b).hover(function(){sldrStop()},nxt_bSlide);nxt_bSlide()});
+</script>
+
+
+
+ </head>
+ <body>
+
+   <div class="menu_main">
+		           <ul  class="menu">
+				   <img src="images/logo1.png" class="logo" width="90" height="90">
+        </ul>
+        <hr class="hr">			
+</div>
+
+<div class="cleft">
+<div class="sl_ctr">
+<div class="sldr">  
+<img src="class/b_class.jpg" alt="">
+</div>
+<div class="prv_b"></div>
+<div class="nxt_b"></div>
+</div>
+<div class="text">
+	<p><b>Mercedes-Benz B-класс</b>  серия компактных автомобилей немецкой торговой марки Mercedes-Benz, появившаяся в немецких салонах в марте 2005 года. Впервые была представлена в 2005 году на Женевском автосалоне, а предшествовал серийному автомобилю концепткар Vision B. Производится в Раштатте. Автомобиль несколько больше А-класса, при этом использует его подвеску и двигатели. Также как и А-класс, B-класс имеет передний привод, а начиная со второго поколения и систему постоянного полного привода 4MATIC. Европейский комитет по проведению независимых краш-тестов EuroNCAP относит серию к классу малых многоцелевых автомобилей (MPV).
+
+<p>Первое поколение серии с заводским индексом W245 было представлено в 2005 году и производилось вплоть до 2011 года, когда ему на смену пришло второе поколение в лице автомобилей с индексом W242/W246. Помимо бензиновых и дизельных силовых агрегатов автомобили оснащаются гибридными (Hybrid / F-Cell), газовыми (NGT) и электрическими (E-Cell) двигателями. В настоящее время серийной высокопроизводительной модификации от подразделения Mercedes-AMG не представлено ни для одного поколения B-класса (существует лишь концептуальная версия B55 AMG).
+
+<p>По состоянию на 20 декабря 2013 года продажи автомобилей B-класса достигли отметки в 1 миллион единиц (начиная с момента запуска в 2005 году).
+</div>
+</div>
+ </body>
+ 
+</html>
